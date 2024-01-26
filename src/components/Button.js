@@ -1,9 +1,15 @@
 
-const Button = ({ children, onClick, className="", disabled, ...props }) => {
+import LoaderIcon from "react-loader-icon";
+
+const Button = ({ children, onClick, className="", disabled, loading = false, ...props }) => {
 
   return (
-    <button className={`button ${className}`} disabled={disabled} onClick={onClick}>
+    <button className={`button button--loader ${className}`} disabled={disabled} onClick={onClick}>
       {children}
+
+      {
+        loading && (<LoaderIcon type={"spin"} size={20} className="spin-loader" />)
+      }
     </button>
   )
 } 

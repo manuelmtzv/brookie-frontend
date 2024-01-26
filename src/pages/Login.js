@@ -35,7 +35,7 @@ const Login = () => {
           <label htmlFor="password">Password:</label>
           <input required type="password" name="password" id="password" />
           
-          <Button className="login__submit" disabled={isLoading}>Log in</Button>
+          <Button className="login__submit" disabled={isLoading} loading={isLoading}>Log in</Button>
 
           {
             error && (<p className="error">{`${error.type === "CRITICAL" ? "❌" : "⚠️"} ${error.error}`}</p>)

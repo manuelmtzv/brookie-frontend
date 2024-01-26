@@ -99,6 +99,8 @@ button {
   cursor: pointer;
 }
 
+
+
 // - Helpers -
 .container {
   width: 90%;  
@@ -133,6 +135,18 @@ button {
   &:hover {
     background-color: lighten($color: $orange, $amount: 4);
   }
+}
+
+.button--loader {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.spin-loader {
+  width: fit-content;
+  margin: 0 !important;
 }
 
 .form {
